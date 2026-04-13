@@ -47,19 +47,21 @@ public class SpeedScaleView extends View {
     }
 
     private void init(Context context, @Nullable AttributeSet attrs) {
-        // ডিফল্ট ভ্যালু (যদি XML-এ কিছু না দেওয়া থাকে)
+        // ডিফল্ট ভ্যালু
         int lineColor = Color.WHITE;
         int centerLineColor = Color.parseColor("#EC407A");
         int textColor = Color.WHITE;
         float textSize = 32f;
 
-        // XML থেকে কাস্টম ভ্যালুগুলো পড়া
+        // XML থেকে কাস্টম ভ্যালুগুলো পড়া (Safe way)
         if (attrs != null) {
-            try (TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.SpeedScaleView)) {
+            TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.SpeedScaleView);
+            try {
                 lineColor = a.getColor(R.styleable.SpeedScaleView_lineColor, lineColor);
                 centerLineColor = a.getColor(R.styleable.SpeedScaleView_centerLineColor, centerLineColor);
                 textColor = a.getColor(R.styleable.SpeedScaleView_textColor, textColor);
                 textSize = a.getDimension(R.styleable.SpeedScaleView_textSize, textSize);
+            } finally {
                 a.recycle();
             }
         }
