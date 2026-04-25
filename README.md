@@ -15,37 +15,27 @@
 আপনার প্রজেক্টে এই লাইব্রেরিটি যুক্ত করতে নিচের ধাপগুলো অনুসরণ করুন:
 
 ### ১. JitPack রিপোজিটরি যোগ করুন
-আপনার প্রজেক্টের `settings.gradle` ফাইলে `maven { url 'https://jitpack.io' }` যোগ করুন:
+আপনার প্রজেক্টের `settings.gradle` ফাইলে JitPack যোগ করুন:
 
-### Like This
-gradle dependencyResolutionManagement {
-
-
-repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
-repositories { 
-
-google() 
-
-mavenCentral()
-
-maven { url 'https://jitpack.io' } // এটি যোগ করুন } 
-
+```gradle
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories { 
+        google() 
+        mavenCentral()
+        maven { url 'https://jitpack.io' } 
+    } 
 }
-
-
+```
 
 ### ২. ডিপেন্ডেন্সি যোগ করুন
 আপনার অ্যাপ মডিউলের `build.gradle` (Module: app) ফাইলে নিচের লাইনটি যোগ করুন:
 
-
+```gradle
 dependencies {
-
-implementation 'com.github.Aptic-Studio:android-speed-scale-view:v1.0.0'
-
+    implementation 'com.github.Aptic-Studio:android-speed-scale-view:v1.0.2'
 }
-
-
-
+```
 
 ---
 
@@ -54,33 +44,20 @@ implementation 'com.github.Aptic-Studio:android-speed-scale-view:v1.0.0'
 ### ১. XML লেআউটে যোগ করুন
 আপনার `layout.xml` ফাইলে নিচের কোডটি ব্যবহার করুন:
 
-
+```xml
 <com.apticstudio.speed_scale_view.SpeedScaleView 
-
-android:id="@+id/speedScaleView" 
-
-android:layout_width="match_parent" 
-
-android:layout_height="200dp" 
-
-app:lineColor="#FFFFFF" 
-
-app:centerLineColor="#EC407A" 
-
-app:textColor="#FFFFFF" 
-
-app:textSize="14sp" />
-
-
-
-
-
+    android:id="@+id/speedScaleView" 
+    android:layout_width="match_parent" 
+    android:layout_height="200dp" 
+    app:lineColor="#FFFFFF" 
+    app:centerLineColor="#EC407A" 
+    app:textColor="#FFFFFF" 
+    app:textSize="14sp" />
+```
 
 ---
 
 ## 🎨 কাস্টমাইজেশন (Attributes)
-
-আপনি নিচের অ্যাট্রিবিউটগুলো ব্যবহার করে ভিউটি কাস্টমাইজ করতে পারবেন:
 
 | Attribute | Format | Description |
 |-----------|--------|-------------|
@@ -98,30 +75,16 @@ app:textSize="14sp" />
 
 ---
 
-## 🤝 অবদান (Contribution)
-আপনি যদি এই লাইব্রেরিতে কোনো নতুন ফিচার যোগ করতে চান বা কোনো বাগ (bug) খুঁজে পান, তবে নির্দ্বিধায় **Pull Request** পাঠান অথবা **Issue** ক্রিয়েট করুন।
-
----
-
 ## 📄 লাইসেন্স (License)
-এই প্রজেক্টটি Apache License 2.0 এর অধীনে লাইসেন্সকৃত। বিস্তারিত জানতে [LICENSE](http://www.apache.org/licenses/LICENSE-2.0) ফাইলটি দেখুন।
+এই প্রজেক্টটি **Apache License 2.0** এর অধীনে লাইসেন্সকৃত। বিস্তারিত জানতে [LICENSE](LICENSE) ফাইলটি দেখুন।
+
 ---
 
 ## 👨‍💻 ডেভেলপার
-This library was created by : **[ApticStudio](ApticStudio.com)**
+This library was created by : **[Aptic Studio](https://github.com/Aptic-Studio)**
 
-GitHub : [https://github.com/Aptic-Studio](https://github.com/Aptic-Studio)
-
-Website: [ApticStudio.com](https://apticstudio.com/)
-
-Email : contact.apticstudio@gmail.com
+- **GitHub**: [https://github.com/Aptic-Studio](https://github.com/Aptic-Studio)
+- **Website**: [apticstudio.com](https://apticstudio.com/)
+- **Email**: contact.apticstudio@gmail.com
 
 আপনার যদি কোনো প্রশ্ন থাকে, তবে আমাদের সাথে যোগাযোগ করতে পারেন।
-
-
-
-
-
-
-
-
